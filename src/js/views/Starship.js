@@ -10,13 +10,13 @@ const Starship = () => {
     
     useEffect(() => {
   
-      const geStarship= () => {
+      const getStarship= () => {
         fetch(`https://www.swapi.tech/api/starships/${id}`)
           .then((response) => response.json())
           .then((data) => setNave(data.results))
   
       }
-      getStartship();
+      getStarship();
   
     }, []);
   
@@ -24,7 +24,7 @@ const Starship = () => {
      return (  
 
           <div className="container-fluid d-flex mt-2 justify-content-center"
-              key={persona.id}>
+              key={nave.id}>
                   <div className="card card-info" style={{ width: 18 + "rem" }}>
                   <img src={"https://starwars-visualguide.com/assets/img/characters/" + personas.id + ".jpg"} className="card-img-top" alt="..." />
                     <div className="card-body border">

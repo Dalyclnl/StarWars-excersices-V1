@@ -5,7 +5,7 @@ const Starships = () => {
 
   useEffect(() => {
 
-    const getStartships = () => {
+    const getStarships = () => {
       fetch("https://www.swapi.tech/api/starships/")
         .then((response) => response.json())
         .then((data) => setNaves(data.results))

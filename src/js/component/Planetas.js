@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-const Lugar = () => {
-  const [planetas, setPlanetas] = useState([]);
+const Planetas = () => {
+  const [planeta, setPlaneta] = useState([]);
 
   useEffect(() => {
 
-    const getLugar = () => {
+    const getPlaneta = () => {
       fetch("https://www.swapi.tech/api/planets/")
         .then((response) => response.json())
-        .then((data) => setPlanetas(data.results))
+        .then((data) => setPlaneta(data.results))
 
     }
-    getLugar();
+    getPlaneta();
 
   }, []);
 
-  return planetas.map((planeta) => {
+  return planeta.map((planeta) => {
     return (
         <div className="container-fluid d-flex mt-2 "
             key={planeta.uid}>
