@@ -1,6 +1,10 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import Planetas from "../component/Planetas";
+import Personajes from "../component/Personajes";
+import Starships from "../component/Starships";
+
 
 export const Home = () => (
 	<div className="text-center mt-5">
